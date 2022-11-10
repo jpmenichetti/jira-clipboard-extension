@@ -1,0 +1,46 @@
+{
+    "manifest_version": 3,
+    "name": "Jira Clipboard Extension",
+    "description": "Copy a ticket link to the clipboard",
+    "version": "1.0",
+    "icons": {
+        "16": "images/icon16.png",
+        "32": "images/icon32.png",
+        "48": "images/icon48.png"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://evernote.jira.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_icon": {
+            "16": "images/icon16.png",
+            "32": "images/icon32.png",
+            "48": "images/icon48.png"
+        },
+        "default_title": "Click to copy a Jira ticket link to the clipboard"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+U",
+                "mac": "Command+U"
+            }
+        }
+    },
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "clipboardWrite"
+    ]
+}

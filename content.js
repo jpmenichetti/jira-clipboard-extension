@@ -1,5 +1,5 @@
 //import {browseUrl} from "./constants.js";
-const jiraServer = 'https://evernote.jira.com';
+const jiraServer = 'https://{company}.jira.com';
 const browseUrl = jiraServer+'/browse/';
 const selectedParam = 'selectedIssue';
 

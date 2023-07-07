@@ -1,3 +1,3 @@
-export const jiraServer = 'https://evernote.jira.com';
+export const jiraServer = 'https://{company}.jira.com';
 export const browseUrl = jiraServer+'/browse/';
 export const selectedParam = 'selectedIssue';

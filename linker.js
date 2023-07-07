@@ -1,11 +1,6 @@
 import {selectedParam} from "./constants.js";
 import {browseUrl} from "./constants.js";
 
-//const jiraServer = 'https://evernote.jira.com';
-//const browseUrl = jiraServer+'/browse/';
-//const selectedParam = 'selectedIssue';
-
-
 export function createLink(url){
     let link;
     let ticket;
@@ -29,5 +24,3 @@ export function createLink(url){
     return `<a href="${link}">${ticket}</a>`;
     //return `[${ticket}](${url})`;
 }
-
-//console.log(createLink("https://evernote.jira.com/jira/software/c/projects/CAP/boards/783?modal=detail&selectedIssue=CAP-4409"));
